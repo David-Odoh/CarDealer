@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
- import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ListModelComponent } from './model/list-model/list-model.component';
@@ -22,8 +22,6 @@ import { AddCarComponent } from './car/add-car/add-car.component';
 import { DetailCarComponent } from './car/detail-car/detail-car.component';
 import { EditCarComponent } from './car/edit-car/edit-car.component';
 import { ListCarComponent } from './car/list-car/list-car.component';
-import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { DealerComponent } from './dealer/dealer.component';
 import { CarComponent } from './car/car.component';
 import { MakeComponent } from './make/make.component';
@@ -97,8 +95,6 @@ const appRoutes: Routes = [
     DetailCarComponent,
     EditCarComponent,
     ListCarComponent,
-    HomeComponent,
-    NavbarComponent,
     DealerComponent,
     CarComponent,
     MakeComponent,

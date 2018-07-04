@@ -11,20 +11,21 @@ import { map } from 'rxjs/operators';
 export class DealerService {
 
 
-BASE_URL = 'http://localhost:5000/cardealers';
+  BASE_URL = 'http://localhost:5000/cardealers';
 
   constructor(private http: Http, private router: Router) {
   }
 
+  checkMe: any;
   getDealers() {
-      return this.http.get(this.BASE_URL + '/').toPromise();
-    .pipe(
-      map(res => {
-        this.checkMe = res;
-        if (this.checkMe._body !== null) {
-          return res.json();
-        }
-      })
+    return this.http.get(this.BASE_URL + '/')
+      .pipe(
+        map(res => {
+          this.checkMe = res;
+          if (this.checkMe._body !== null) {
+            return res.json();
+          }
+        })
       );
   }
 
