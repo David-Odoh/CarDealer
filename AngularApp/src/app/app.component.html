@@ -1,0 +1,118 @@
+<div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
+
+  <div class="navbar-header pull-left">
+    <div class="navbar-brand">
+      <div class="pull-left">
+        <a routerLink="/" class="toggle-button toggle-sidebar btn-navbar">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <a class="appbrand innerL">Car Dealer</a>
+      <div class="colors pull-right hidden-xs">
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav navbar-nav navbar-left">
+    <li class="hidden-xs" style="margin-left: 0; padding-left:0">
+      <form class="navbar-form navbar-left " role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Type in here..." />
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-inverse">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right hidden-xs">
+    <li class="dropdown notification">
+      <a class="dropdown-toggle menu-icon" data-toggle="dropdown">
+        <i class="fa fa-fw fa-envelope-o"></i>
+        <span class="badge badge-primary">@</span>
+      </a>
+      <li>
+        <a class="menu-icon">
+          <i class="fa fa-sign-out"></i>
+        </a>
+      </li>
+  </ul>
+</div>
+
+
+<div id="menu" class="hidden-print hidden-xs">
+  <div class="sidebar sidebar-inverse">
+    <div class="user-profile media innerAll">
+      <a href="" class="pull-left">
+        <img src="assets/wp-content/uploads/sites/3/2016/02/admin-avatar.png" alt="" class="img-circle">
+      </a>
+      <div class="media-body">
+        <a href="" class="strong">Administrator</a>
+        <p class="text-success">
+          <i class="fa fa-fw fa-circle"></i> Online</p>
+      </div>
+    </div>
+    <div class="sidebarMenuWrapper">
+      <ul class="list-unstyled">
+        <li>
+          <a (click)="showCarDealers()">
+            <i class="icon-projector-screen-line"></i>
+            <span style="font-size: 17px;">Car Dealers</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="showCarMakes()">
+            <i class="icon-user-1"></i>
+            <span style="font-size: 17px;">Car Makes</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="showCarModels()">
+            <i class="icon-user-1"></i>
+            <span style="font-size: 17px;">Car Models</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="showCars()">
+            <i class="icon-user-1"></i>
+            <span style="font-size: 17px;">Cars</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="content">
+  <div class="heading-buttons bg-white border-bottom innerAll animated fadeInDown">
+    <h1 class="content-heading padding-none pull-left" style="font-size:50px">Dealership</h1>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- ROUTER OUTLET -->
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  <!--/END ROUTER OUTLET -->
+
+</div>
+<!-- // Content END -->
+
+<div class="clearfix"></div>
+<!-- // Sidebar menu & content wrapper END -->
+
+<div id="footer" class="hidden-print">
+
+  <!--  Copyright Line -->
+  <div class="copy">&copy; 2018 - All Rights Reserved.
+    <a href="http://dynamicflakesltd.com" target="_blank">Designed by Dynamic Flakes Limited</a>
+  </div>
+  <!--  End Copyright Line -->
+
+</div>
+<!-- // Footer END -->

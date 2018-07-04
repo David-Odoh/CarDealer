@@ -1,0 +1,550 @@
+@media (max-width: math($(baseTemplateWidth) + 200)px) {
+/*@media (max-width: math($(baseTemplateWidth) + 2*$(pagePadding))px) {*/
+/*@media (max-width: math($(baseTemplateWidth) + 2*$(logoIndent) - 1, px)) { */
+	body:not(.btMenuCenterEnabled) .logo {
+		margin: 0 !important;
+	}
+	.mainHeader:not(.gutter) > .port {
+		margin: 0 $(pagePadding)px !important;
+		padding: 0 !important;
+	}
+}
+
+@media (max-width: 1400px) { 
+	h1, :any(.header.extralarge, .header.huge) h1 {
+		font-size: 48px;
+	}
+	.header.extralarge, .header.huge {
+		.btSuperTitle {
+			font-size: 16px;
+		}
+		.dash:after, .dash:before {
+			margin-top: 20px;
+		}
+		.btSubTitle {
+			margin-top: 16px;
+			font-size: 16px;
+		}
+	}
+
+	h2, .header.large h2, .header.large h1 {
+		font-size: 28px;
+	}
+	.header.large {
+		.btSuperTitle {
+			font-size: 13px;
+		}
+		.dash:after, .dash:before {
+			margin-top: 14px;
+			border-bottom: 2px solid $(accentColor);
+		}
+		.btSubTitle {
+			margin-top: 15px;
+		}
+	}
+	
+	h3 .header.medium h2, .header.medium h3 {
+		font-size: 20px;
+	}
+	.header.medium {
+		.dash:after, .dash:before {
+			margin-top: 10px;
+			border-bottom: 2px solid $(accentColor);
+		}
+		.btSubTitle {
+			margin-top: 7px;
+		}
+	}
+	
+	.topExtraSpaced {
+		padding-top: math(6*$(innerVerticalPadding), px);
+	}
+
+	.bottomExtraSpaced {
+		padding-bottom: math(6*$(innerVerticalPadding), px);
+	}
+	.btMenuHorizontal {
+		.btLogoArea {
+			padding: 20px 0;
+		}		
+		.topBarInLogoArea .topBarInLogoAreaCell {
+			.btIconWidgetTitle {
+				font-size: 12px;
+			}
+			.btIconWidgetText {
+				font-size: 30px;
+				font-family: Playfair Display;
+			}
+		}
+	}
+	body.btMenuHorizontal.btMenuBelowLogo:not(.btStickyHeaderActive) {
+		.topBarInMenu {
+			height: 40px!important;
+		}
+		nav>ul>li>a {
+			line-height: 40px!important;
+		}
+		nav>ul>li>ul {
+			top: 40px;
+		}		
+	}
+	.btMenuHorizontal:not(.btMenuBelowLogo) nav>ul>li>a {
+		line-height: 40px;
+	}
+}
+
+
+@media (max-width: math($(baseTemplateWidth)-1, px)) { 
+
+	.gutter .port {
+		width: 100%;
+		max-width: none;
+		padding-left: $(pagePadding)px;
+		padding-right: $(pagePadding)px;
+	}
+	.btSlideGutter {
+		padding-left: $(pagePadding)px;
+		padding-right: $(pagePadding)px;
+		max-width: none;
+		width: 100%;
+	}
+	.boldSection.gutter .btSlideGutter {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.btWithSidebar .btSidebar {
+		padding-left: $(pagePadding)px;
+		padding-right: $(pagePadding)px;
+	}
+
+	.btSearchInner.btFromTopBox .btSearchInnerClose {
+		right: $(pagePadding)px;
+	}
+
+	.btMenuVerticalRight .btVerticalMenuTrigger {
+		margin: 0;
+	}
+
+	.wVariable .btSlidePane {
+		padding: 0 30px;
+	}
+
+	.touch body.btMenuVertical .menuPort {
+		overflow: auto;
+	}
+
+	.btAnimNav {
+		
+		li.btAnimNavDot {
+			display: none;
+		}
+	}
+
+	.btGhost .slick-slider {
+		h4.nbs {
+			top: auto;
+			bottom: 20px;
+		}
+	}
+
+}
+
+.btMenuVerticalOn.btMenuGutter .topBar .topBarPort {
+	padding: 0;
+	margin: 0 -30px;
+	width: auto;
+	display: block;
+	position: static;
+}
+
+.btMenuVerticalOn.btMenuGutter .topBar .topBarPort .topTools {
+	text-align: center !important;
+}
+
+@media (max-width: 1199px) {
+
+
+	.btCounterHolder, .btCounterHolder.btCounterLargeSize {
+		font-size: 60px;
+		line-height: 65px;
+		height: 65px;
+		.btCounter {
+			height: query( parent, line-height );
+		}
+		span.onedigit {
+			height: query( parent, font-size );
+		}
+		span.onedigit span {
+			height: query( parent, line-height );
+		}
+		.btCountdownHolder {
+			> span > span > span {
+				transform: translateY(-65px);		
+			}
+			.days_text, .hours_text, .minutes_text, .seconds_text {
+		
+			}
+		}
+	}
+
+	.slidedVariable .slick-list {
+		z-index: 1;
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	.btMenuVerticalRight.btPageTransitions .btVerticalMenuTrigger {
+		margin: 0 34px 0 0;
+	}
+
+	.neighboringArticles .btTextLeft:after {
+		content: ' ';
+		clear: both;
+		display: table;
+		width: 100%;
+	}
+
+	.neighboringArticles .btTextRight {
+		margin: 20px 0 0;
+		padding: 20px 15px 0;
+		clear: left;
+		position: relative;
+	}
+
+	.neighboringArticles .btTextRight:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 15px;
+		right: 15px;
+		height: 1px;
+	}
+
+	:lightSkinSelector .neighboringArticles .btTextRight:before {
+		background-color: $(lightBorderColor);
+	}
+
+	:darkSkinSelector  .neighboringArticles .btTextRight:before {
+		background-color: 1px solid $(darkBorderColor);
+	}
+
+	.single-portfolio .boldArticle  .socialRow .btIco {
+		margin-bottom: 0.5em;
+	}
+
+	.btGoogleMapsWrapper .btGoogleMapsContent {
+		position: relative;
+		clear: both;
+		width: auto;
+		margin: 0;
+		right: 0;
+		left: 0;
+		top: 0;
+		:lightSkinSelector & {
+			background-color: $(lightBgSubColor);
+			color: $(lightFontColor);
+		}
+		:darkSkinSelector & {
+			background-color: $(darkBgSubColor);
+			color: $(darkFontColor);
+		}
+	}
+
+	/* Grid related */
+
+	
+	.btHighlight > .rowItemContent {
+		margin-bottom: 10px;
+	}
+
+	/* Horizontal padding */
+
+	/*.rowItem.btDoublePadding .rowItemContent {
+		padding: 0 math(1*$(innerHorizontalPadding), px);
+	}
+
+	.btTableRow .rowItem.btDoublePadding .rowItemContent {
+		padding: 0 math(2*$(innerHorizontalPadding), px);
+	}*/
+
+	.btFooterCopy.btTextLeft  {
+		text-align: center;
+	}
+	.btFooterMenu.btTextRight {
+		text-align: center;
+	}
+	.btSiteFooter .menu {
+		text-align: center;
+	}
+	.btSiteFooter .menu li {
+		margin: 0 15px;
+		display: inline-block;
+	}
+	.boldSection.btSiteFooterWidgets.gutter {
+		padding: 0 math(2*$(innerHorizontalPadding), px);
+	}
+}
+
+@media (max-width: 767px) {
+	.btContent, .btSidebar {
+		width: 100%;
+		float: none;
+	}
+	:any( .btSidebarLeft, .btSidebarRight) .btSidebar {
+		padding-left: $(pagePadding)px;
+		padding-right: $(pagePadding)px;
+	}
+	h1, :any(.header.extralarge, .header.huge) h1 {
+		font-size: 32px;
+	}
+
+	.header.extralarge {
+		:any(.btSuperTitle, .btSubTitle) {
+			font-size: 13px;
+		}
+	}
+	.header.huge {
+		:any(.btSuperTitle, .btSubTitle) {
+			font-size: 15px;
+		}
+	}
+	.btContentHolder blockquote {
+		font-size: 1.2em;
+		line-height: 1.6;
+	}
+
+	.btArticleMeta {
+		text-align: left;
+		dd:after {
+			content: "; ";
+		}
+		dt:after {
+			content: ": ";
+		}
+	}
+
+	.btArticleMeta.onBottom {
+		dd, dt {
+			display: inline-block;
+			padding-right: 5px;
+			margin-bottom: 0;
+		}
+	}
+
+	.btArticleMeta.onTop dd {
+		margin-bottom: 0;
+	}
+
+
+	.btArticleListItem .btArticleFooter {
+		:any(.btReadArticle,.btShareArticle) {
+			text-align: center;
+		}
+		.btShareArticle:before {
+			width: 65px;
+			height: 1px;
+			background-color: $(accentColor);
+			content: ' ';
+			display: block;
+			margin: 10px auto 15px;
+		}
+	}
+
+	.shareRowItem {
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	.shareRowItem, .tagsRowItem {
+		text-align: center;
+		.btTags ul li {
+			float: none;
+		}
+
+	}
+
+	.btArticleListItem .btIconRow {
+		margin-top: 12px;
+	}
+
+	.btArticleListItem .btIconRow .btIco {
+		margin: 0 0.25em;
+	}
+
+    .btArticleListItem .btReadArticle a.btContinueReading {
+		display: inline-block;
+		float: none;
+		margin-bottom: 8px;
+	}
+
+	.btMenuVertical .menuPort nav {
+		margin: 0 -35px;
+	}
+
+	.btSlidePane .articleMeta.btTextRight {
+		text-align: left;
+	}
+
+	.btArticleListItem {
+		margin-bottom: 40px;
+	}
+	.btLatestPostsContainer.horizontalPosts {
+		display: block;
+		.btSingleLatestPost {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.btArticleListItem .btArticleFooter {
+		.btShareArticle:before {
+			display: none !important;
+		}
+	}
+}
+
+@media (max-width:620px) {
+
+	.slidedVariable {
+		.nbs {
+			display: none !important;
+		}
+		.slick-dots {
+			display: block !important;
+		}
+	}
+
+
+	.btHasAuthorInfo .btArticleListBody {
+		padding-left: 0;
+		clear: both;
+	}
+
+	.articleSideGutter {
+		position: relative;
+		left: 0;
+		width: auto;
+	}
+
+	.asgItem.avatar {
+		width: 45px;
+		float: left;
+	}
+}
+
+@media (max-width: 480px) {
+	.comment-respond form {
+		width: 100%;
+	}
+
+	.btMenuVertical .menuPort nav {
+		margin: 0 -50px;
+	}
+
+	.neighboringArticles .nbsImage {
+		display: none;
+	}
+
+	.btMediaBox.btQuote p, .btMediaBox.btLink p {
+		line-height: 1.2;
+	}
+
+	.btQuoteBooking .btQuoteBookingForm.btActive .btTotalNextWrapper {
+		padding: 0;
+	}
+
+	.btQuoteBooking .btQuoteBookingForm .btQuoteTotal {
+		float: none;
+		margin: 0 0 12px;
+	}
+
+	.btQuoteBooking .btQuoteBookingForm.btActive .btQuoteTotal, .btQuoteBooking .btQuoteBookingForm .btQuoteTotal {
+		height: auto;
+	}
+
+	.btPayPalButton {
+		margin: 0;
+		float: none;
+	}
+
+	.btQuoteBooking .btQuoteBookingForm .boldBtn {
+		display: inline-block;
+		width: auto;
+		float: none;
+		margin: 0;
+	}
+
+	.btQuoteBooking .btContactNext {
+		margin: 0;
+	}
+
+	.btCounterHolder, .btCounterHolder.btCounterLargeSize {
+		font-size: 40px;
+		line-height: 45px;
+		height: 45px;
+		
+		.btCounter {
+			height: query( parent, line-height );
+		}
+		span.onedigit {
+			height: query( parent, font-size );
+		}
+		span.onedigit span {
+			height: query( parent, line-height );
+		}
+		.btCountdownHolder {
+			padding-top: 8px;
+			> span > span > span {
+				transform: translateY(-45px);		
+			}
+			.days_text, .hours_text, .minutes_text, .seconds_text {
+				margin-top: -5px;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+
+	body.btMenuVertical {
+
+		> .menuPort {
+			width: 272px;
+		}
+
+	}
+
+	body.btMenuVerticalLeft.btMenuVerticalOn .btPageWrap {
+		transform: translateX(272px);
+	}
+
+	body.btMenuVerticalRight.btMenuVerticalOn .btPageWrap {
+		transform: translateX(-272px);
+	}
+
+	body.btMenuVertical.btMenuVerticalOn .menuPort {
+		transform: translateX(0);
+	}
+
+	.btQuoteBooking .btQuoteBookingForm.btActive .btQuoteTotal, .btQuoteBooking .btQuoteBookingForm .btQuoteTotal {
+		height: auto;
+	}
+
+	.btSiteFooter .menu li {
+		display: block;
+		margin: 10px 0;
+		border-top: 1px solid;
+		padding-top: 10px;
+		:lightSkinSelector & {
+			border-color: $(lightBorderColor);
+		}
+		:darkSkinSelector & {
+			border-color: $(darkBorderColor);
+		}
+	}
+
+}

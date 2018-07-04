@@ -1,0 +1,242 @@
+<div class="bg-white innerAll border-bottom">
+  <ul class="menubar">
+    <li>
+      <a style="font-size: 20px">
+        <strong>Dashboard - All Makes</strong>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="badge badge-primary pull-right">Welcome, Admin</span> Greeting:</a>
+    </li>
+  </ul>
+</div>
+<div class="innerAll spacing-x2">
+
+  <!-- Widget -->
+  <div class="widget widget-inverse">
+
+    <!-- Widget heading -->
+    <div class="widget-head">
+      <h4 class="heading glyphicons calendar">
+        <i></i>Today is {{theDate | date : 'fullDate'}}</h4>
+    </div>
+    <!-- // Widget heading END -->
+
+    <div class="widget-body">
+
+      <!-- Total bookings & sort by options -->
+      <div class="separator bottom">
+       
+        <span class="pull-right">
+          <label class="strong">Sort by:</label>
+          <select class="selectpicker margin-none" data-style="btn-default btn-xs" style="border: 1px solid #ddd">
+            <option>Desending</option>
+            <option>Ascending</option>
+          </select>
+        </span>
+        <div class="clearfix"></div>
+        <button (click)="showAddBooking()" class="btn btn-primary">Add Booking</button>
+      </div>
+      <!-- // Total bookings & sort by options END -->
+
+      <!-- Table -->
+      <table class="table table-bordered table-condensed table-striped table-primary table-vertical-center checkboxs animated fadeInRight">
+        <thead>
+          <tr>
+            <th style="width: 1%;" class="uniformjs">
+              <input type="checkbox" />
+            </th>
+            <th class="center">No.</th>
+            <th class="center">Name</th>
+            <th>Phone No.</th>
+            <th class="center">Email</th>
+            <th class="center">Location</th>
+            <th class="center">Address</th>
+            <th class="center" style="width: 150px;">Actions</th>
+          </tr>
+
+        </thead>
+        <tbody>
+
+          <!-- Item -->
+          <tr class="selectable" >
+            <td class="center uniformjs">
+              <input type="checkbox" />
+            </td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td>
+              <strong></strong>
+              <br/>
+              <small></small>
+            </td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center">
+              <div class="btn-group btn-group-sm">
+                <a  class="btn btn-default">
+                  <i class="fa fa-eye"></i>
+                </a>
+                <a class="btn btn-success">
+                  <i class="fa fa-pencil"></i>
+                </a>
+                <a  id="modals-bootbox-confirm" class="btn btn-danger">
+                  <i class="fa fa-times"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <!-- // Item END -->
+        </tbody>
+      </table>
+      <!-- // Table END -->
+
+      <!-- With selected actions -->
+      <div class="pull-left checkboxs_actions hide-2">
+        <label class="strong">With selected:
+          <select class="selectpicker margin-none" data-style="btn-default btn-small" style="border:1px solid #ddd">
+            <option>Desending</option>
+            <option>Ascending</option>
+          </select>
+        </label>
+      </div>
+      <!-- // With selected actions END -->
+
+
+
+    </div>
+  </div>
+  <!-- // Widget -->
+
+  <!-- Row -->
+  <div class="row animated fadeInUp">
+
+    <!-- Column -->
+    <div class="col-md-4">
+
+      <!-- Widget -->
+      <div class="widget widget-3">
+
+        <!-- Widget heading -->
+        <div class="widget-head">
+          <h4 class="heading">
+            <span class="glyphicons coins">
+              <i></i>
+            </span>Some Stat 1</h4>
+        </div>
+        <!-- // Widget heading END -->
+
+        <div class="widget-body large">
+          
+        </div>
+
+        <!-- Widget footer -->
+        <div class="widget-footer align-right">
+          <a class="glyphicons print">
+            <i></i> Print</a>
+          <a class="glyphicons list">
+            <i></i> View</a>
+        </div>
+        <!-- // Widget footer END -->
+
+      </div>
+      <!-- // Widget END -->
+
+    </div>
+    <!-- // Column END -->
+
+    <!-- Column -->
+    <div class="col-md-4">
+
+      <!-- Widget -->
+      <div class="widget widget-3">
+
+        <!-- Widget heading -->
+        <div class="widget-head">
+          <h4 class="heading">
+            <span class="glyphicons user_add">
+              <i></i>
+            </span>Some Stat 2</h4>
+        </div>
+        <!-- // Widget heading END -->
+
+        <div class="widget-body large">
+          
+        </div>
+
+        <!-- Widget footer -->
+        <div class="widget-footer">
+          <a class="glyphicons print">
+            <i></i> Print</a>
+          <a class="glyphicons list">
+            <i></i> View</a>
+        </div>
+        <!-- // Widget footer END -->
+
+      </div>
+      <!-- // Widget END -->
+
+    </div>
+    <!-- // Column -->
+
+    <!-- Column -->
+    <div class="col-md-4">
+
+      <!-- Widget -->
+      <div class="widget widget-3">
+
+        <!-- Widget heading -->
+        <div class="widget-head">
+          <h4 class="heading">
+            <span class="glyphicons user_remove">
+              <i></i>
+            </span>Some Stat 3</h4>
+        </div>
+        <!-- // Widget heading END -->
+
+        <div class="widget-body large cancellations">
+          
+          <!-- <span>
+            <span></span>
+            <span></span>
+          </span> -->
+        </div>
+
+        <!-- Widget footer -->
+        <div class="widget-footer align-center">
+          <a class="glyphicons print">
+            <i></i> Print</a>
+          <a class="glyphicons list">
+            <i></i> View</a>
+        </div>
+        <!-- // Widget footer END -->
+
+      </div>
+      <!-- // Widget END -->
+
+    </div>
+    <!-- // Column -->
+
+  </div>
+  <!-- // Row END -->
+
+</div>
+
+
+<!-- Modal -->
+<!-- <div class="bootbox modal fade bootbox-confirm in" id="bg-fill" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="bootbox-close-button close" style="margin-top: -10px;">×</button>
+        <div class="bootbox-body">Are you sure?</div>
+      </div>
+      <div class="modal-footer">
+        <button data-bb-handler="cancel" type="button" class="btn btn-default">Cancel</button>
+        <button data-bb-handler="confirm" type="button" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div> -->

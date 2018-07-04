@@ -1,0 +1,91 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+option,
+th,
+tr,
+td,
+select,
+label,
+span,
+.main-nav a,
+.subscribe-button,
+.page-title,
+.pagination,
+.site-footer {
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif
+}
+
+/* Hide scrollbar */
+
+#menu {
+  margin-top: 30px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebarMenuWrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
+}
+
+/*End Hide scrollbar */
+
+.sidebarMenuWrapper {
+  margin-top: 25px;
+}
+
+.navbar.main .navbar-form {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar.main.navbar-primary .navbar-form input {
+  background-color: #9e2b2b;
+  color: #fff;
+}
+
+.navbar.main .navbar-form input {
+  height: 47px;
+  border: none;
+  background: none;
+  width: 300px;
+}
+
+.fa-pencil,
+.fa-times {
+  color: white
+}
+
+.fa-pencil:hover,
+.fa-times:hover {
+  color: black
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+  border-color: #e5e5e5;
+  background: #cb4040;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+bg-fill {
+  background-color: black;
+}
