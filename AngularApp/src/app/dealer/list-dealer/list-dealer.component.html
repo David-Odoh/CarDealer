@@ -27,7 +27,7 @@
 
       <!-- Total bookings & sort by options -->
       <div class="separator bottom">
-       
+        Total No. of Dealers: {{numberOfDealer}}
         <span class="pull-right">
           <label class="strong">Sort by:</label>
           <select class="selectpicker margin-none" data-style="btn-default btn-xs" style="border: 1px solid #ddd">
@@ -36,7 +36,7 @@
           </select>
         </span>
         <div class="clearfix"></div>
-        <button (click)="showAddBooking()" class="btn btn-primary">Add Booking</button>
+        <button class="btn btn-primary">Add Dealer</button>
       </div>
       <!-- // Total bookings & sort by options END -->
 
@@ -60,29 +60,25 @@
         <tbody>
 
           <!-- Item -->
-          <tr class="selectable" >
+          <tr class="selectable" *ngFor="let dealer of dealers  | paginate: { itemsPerPage: 5, currentPage: p }">
             <td class="center uniformjs">
               <input type="checkbox" />
             </td>
-            <td class="center"></td>
-            <td class="center"></td>
-            <td>
-              <strong></strong>
-              <br/>
-              <small></small>
-            </td>
-            <td class="center"></td>
-            <td class="center"></td>
-            <td class="center"></td>
+            <td class="center">{{dealer.id}}</td>
+            <td class="center">{{dealer.name}}</td>
+            <td class="center">{{dealer.phoneNo}}</td>
+            <td class="center">{{dealer.email}}</td>
+            <td class="center">{{dealer.location}}</td>
+            <td class="center">{{dealer.address}}</td>
             <td class="center">
               <div class="btn-group btn-group-sm">
-                <a  class="btn btn-default">
+                <a class="btn btn-default">
                   <i class="fa fa-eye"></i>
                 </a>
                 <a class="btn btn-success">
                   <i class="fa fa-pencil"></i>
                 </a>
-                <a  id="modals-bootbox-confirm" class="btn btn-danger">
+                <a id="modals-bootbox-confirm" class="btn btn-danger">
                   <i class="fa fa-times"></i>
                 </a>
               </div>
@@ -105,6 +101,12 @@
       <!-- // With selected actions END -->
 
 
+      <!-- Pagination -->
+      <ul class="pagination pull-right margin-none">
+        <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+      </ul>
+      <div class="clearfix"></div>
+      <!-- // Pagination END -->
 
     </div>
   </div>
@@ -129,7 +131,7 @@
         <!-- // Widget heading END -->
 
         <div class="widget-body large">
-          
+
         </div>
 
         <!-- Widget footer -->
@@ -163,7 +165,7 @@
         <!-- // Widget heading END -->
 
         <div class="widget-body large">
-          
+
         </div>
 
         <!-- Widget footer -->
@@ -197,7 +199,7 @@
         <!-- // Widget heading END -->
 
         <div class="widget-body large cancellations">
-          
+
           <!-- <span>
             <span></span>
             <span></span>

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-make.component.css']
 })
 export class ListMakeComponent implements OnInit {
+theDate = Date.now();
 
   constructor() { }
 

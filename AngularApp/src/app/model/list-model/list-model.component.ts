@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-model.component.css']
 })
 export class ListModelComponent implements OnInit {
-
+theDate = Date.now();
   constructor() { }
 
   ngOnInit() {

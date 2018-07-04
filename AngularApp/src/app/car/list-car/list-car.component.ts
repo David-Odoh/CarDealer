@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-car.component.css']
 })
 export class ListCarComponent implements OnInit {
+theDate = Date.now();
 
   constructor() { }
 

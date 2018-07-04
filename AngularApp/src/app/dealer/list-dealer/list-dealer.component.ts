@@ -9,12 +9,13 @@ import { DealerService } from './../../services/dealer.service';
 export class ListDealerComponent implements OnInit {
   dealers;
   numberOfDealer;
-  
+  theDate = Date.now();
+  p: Number = 1; // For Ngx-pagination
+
   constructor(public _dservice: DealerService) { }
 
   ngOnInit() {
-    // this.dealers = this._dservice.getDealers();
-    // console.log(this.dealers);
+    this.getAllDealers();
   }
 
   getAllDealers() {
